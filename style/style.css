@@ -6,6 +6,9 @@
 }
 .heading{
     width: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
     margin: 0 auto;
 }
 .inps{
