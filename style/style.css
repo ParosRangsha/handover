@@ -4,8 +4,24 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.inps{
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    width: 550px;
+    color: white;
+}
+.inps input{
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+.inps button{
+    padding: 5px 10px;
+}
 .main{
     width: 550px;
+    margin: 0 auto;
+    border: 5px solid red;
 }
 ul{
     padding: 10px;
