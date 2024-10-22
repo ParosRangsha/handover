@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main{
+    width: 550px;
+}
+ul{
+    padding: 10px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #777;
+}
+ul li{
+    width: calc(100% / 7);
+}
+ol{
+    width: 100%;
+}
+ol li{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+ol li:nth-child(even){
+    background-color: rgba(0, 0, 0, 0.1);
+}
+ol li:nth-child(odd){
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+ol li a{
+    display: inline-block;  
+    text-decoration: none;
+    cursor: text;
+    width: calc(100% / 7);
+}
