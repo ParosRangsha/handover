@@ -1,0 +1,17 @@
+@media (max-width: 760px){
+    *{
+        font-size: 8px !important;
+    }
+    .inps{
+        width: 100% !important;
+    }
+    .main{
+        width: 100% !important;
+    }
+    ol{
+        width: 100% 1 !important;
+    }
+    ul{
+        width: 100% !important;
+    }
+}
