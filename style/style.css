@@ -11,6 +11,13 @@
     align-items: end;
     margin: 0 auto;
 }
+.heading h2{
+    padding: 10px;
+}
+.heading p{
+    padding: 10px;
+    font-style: italic;
+}
 .inps{
     margin: 0 auto;
     padding: 20px;
