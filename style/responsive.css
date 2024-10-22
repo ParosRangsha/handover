@@ -2,6 +2,9 @@
     *{
         font-size: 8px !important;
     }
+    .heading{
+        width: 100% !important;
+    }
     .inps{
         width: 100% !important;
     }

@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.heading{
+    width: 550px;
+    margin: 0 auto;
+}
 .inps{
     margin: 0 auto;
     padding: 20px;
