@@ -4,12 +4,18 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 .heading{
-    width: 550px;
+    width: 700px;
     display: flex;
     justify-content: space-between;
     align-items: end;
     margin: 0 auto;
+    background-color: white;
 }
 .heading h2{
     padding: 10px;
@@ -22,7 +28,7 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #333;
-    width: 550px;
+    width: 700px;
     color: white;
 }
 .inps input{
@@ -33,21 +39,24 @@
     padding: 5px 10px;
 }
 .main{
-    width: 550px;
+    width: 700px;
     margin: 0 auto 100px;
     border: 3px solid blue;
 }
 ul{
-    padding: 10px;
-    width: 100%;
+    margin: 0 auto;
+    width: 700px;
     list-style: none;
     display: flex;
     justify-content: space-between;
     background-color: #777;
 }
 ul li{
+    padding: 10px 0;
     width: calc(100% / 7);
     text-align: center;
+    color: white;
+    border: 1px solid white;
 }
 ol{
     width: 100%;
