@@ -8,30 +8,37 @@
     <link rel="stylesheet" href="style/responsive.css">
 </head>
 <body>
-<div class="nav">
-    <div class="heading">
-        <h2>Hand Over Report</h2>
-        <p>D<span id="fileExcel">a</span>te: 01-Jan-2024 to 20-Oct-2024 <a href="HandOver.xlsm" id="excel">.</a></p>
+<div class="user">
+    <div class="nav">
+        <div class="heading">
+            <h2>Hand Over Report</h2>
+            <p>D<span id="fileExcel">a</span>te: 01-Jan-2024 to 20-Oct-2024 <a href="HandOver.xlsm" id="excel">.</a></p>
+        </div>
+        <div class="inps"><label for="inpDispo">Dispo</label><input type="text" id="inpDispo" placeholder="Enter Dispo"><button id="btnCheck">Check</button></div>
+        <ul>
+            <li>Dispo</li>
+            <li>Start Roll</li>
+            <li>End Roll</li>
+            <li>Total Roll</li>
+            <li>QTY</li>
+            <li>Unit</li>
+            <li>Date</li>
+        </ul>
     </div>
-    <div class="inps"><label for="inpDispo">Dispo</label><input type="text" id="inpDispo" placeholder="Enter Dispo"><button id="btnCheck">Check</button></div>
-    <ul>
-        <li>Dispo</li>
-        <li>Start Roll</li>
-        <li>End Roll</li>
-        <li>Total Roll</li>
-        <li>QTY</li>
-        <li>Unit</li>
-        <li>Date</li>
-    </ul>
+        <div class="main">
+            
+            <ol></ol>
+        </div>
 </div>
-    <div class="main">
-        
-        <ol></ol>
-    </div>
     
 
 
-
+<div class="passkey">
+    <span>Your Password</span>
+    <input type="password" id="inpPass">
+    <button id="btnPass">Login</button>
+    <p id="warn">Your remaining times is 10 seconds</p>
+</div>
 
 
     <script src="js/myarray.js"></script>

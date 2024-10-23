@@ -1,6 +1,7 @@
 
 let btnCheck = document.querySelector("#btnCheck")
 let list = document.querySelector("ol")
+let pass;
 btnCheck.addEventListener("click",()=>{
     list.innerHTML = ""
     let inpTxt = document.querySelector("#inpDispo")
@@ -21,3 +22,34 @@ clickDownload.addEventListener("click",()=>{
         excelDownload.style.display= "none"
     }
 })
+
+
+
+
+let inpPass = document.querySelector("#inpPass")
+let btnPass = document.querySelector("#btnPass")
+let user = document.querySelector(".user")
+let passKey = document.querySelector(".passkey")
+
+btnPass.addEventListener("click",()=>{
+    if(inpPass.value === "421"){
+        user.style.display = "block"
+        passKey.style.display = "none"
+        pass = 421
+    }else{
+        alert("Wrong password")
+    }
+})
+let count = 10
+let warn = document.querySelector("#warn")
+setInterval(()=>{
+    if(pass === 421){
+       
+    }else{
+        count--
+        warn.innerHTML = `Your remaining times is ${count} seconds`
+        if(count === 0){
+            window.close()
+        }
+    }
+},1000)
