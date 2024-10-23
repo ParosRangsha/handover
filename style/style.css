@@ -10,7 +10,7 @@
     z-index: 999;
 }
 .heading{
-    width: 700px;
+    width: 750px;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -28,7 +28,7 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #333;
-    width: 700px;
+    width: 750px;
     color: white;
 }
 .inps input{
@@ -39,13 +39,13 @@
     padding: 5px 10px;
 }
 .main{
-    width: 700px;
+    width: 750px;
     margin: 0 auto 100px;
     border: 3px solid blue;
 }
 ul{
     margin: 0 auto;
-    width: 700px;
+    width: 750px;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -72,8 +72,6 @@ ol li:nth-child(even){
 ol li:nth-child(odd){
     background-color: rgba(0, 0, 0, 0.2);
 }
-
-
 
 
 
