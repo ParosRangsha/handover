@@ -15,7 +15,7 @@ let clickDownload = document.querySelector("#fileExcel")
 clickDownload.addEventListener("click",()=>{
     let inpTxtDownload = document.querySelector("#inpDispo")
     let excelDownload = document.querySelector("#excel")
-    if(inpTxtDownload.value == "excelDownload"){
+    if(inpTxtDownload.value == "asdf"){
         excelDownload.style.display= "inline-block"
     }else{
         excelDownload.style.display= "none"
