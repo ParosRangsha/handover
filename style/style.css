@@ -47,6 +47,7 @@ ul{
 }
 ul li{
     width: calc(100% / 7);
+    text-align: center;
 }
 ol{
     width: 100%;
@@ -60,7 +61,7 @@ ol li:nth-child(even){
     background-color: rgba(0, 0, 0, 0.1);
 }
 ol li:nth-child(odd){
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 
@@ -69,4 +70,5 @@ ol li:nth-child(odd){
 
 ol li span{
     width: calc(100% / 7);
+    text-align: center;
 }
