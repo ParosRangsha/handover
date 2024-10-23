@@ -26,6 +26,7 @@ a{
 .heading h2{
     padding: 10px;
 }
+
 .heading p{
     padding: 10px;
     font-style: italic;
@@ -42,6 +43,9 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.inps select{
+    padding: 5px;
 }
 .inps input{
     padding: 5px 10px;

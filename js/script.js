@@ -57,9 +57,9 @@ setInterval(()=>{
             warn.innerHTML = `Your remaining times is ${count} seconds`
         }
         if(count === 0){
+            window.close()
             warn.innerHTML = "You have no more time"
             passKey.style.display = "none"
-            window.close()
 
         }
     }
@@ -71,10 +71,19 @@ setInterval(()=>{
 let countClose = 300
 setInterval(()=>{
     if(countClose === 0){
+        window.close()
         user.style.display = "none"
         passKey.style.display = "none"
-        window.close()
     }else{
         countClose--
     }
 },1000)
+
+let headA = document.querySelector("#headA")
+let headB = document.querySelector("#headB")
+let headC = document.querySelector("#headC")
+let headD = document.querySelector("#headD")
+let headE = document.querySelector("#headE")
+let headF = document.querySelector("#headF")
+let headG = document.querySelector("#headG")
+let reportSelect = document.querySelector("#reportSelect")
