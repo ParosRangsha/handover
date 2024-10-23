@@ -9,6 +9,7 @@ btnCheck.addEventListener("click",()=>{
 
 
 function check(){
+    totalQty = 0;
     list.innerHTML = ""
     let inpTxt = document.querySelector("#inpDispo")
     let productIdToFind = Number(inpTxt.value);
