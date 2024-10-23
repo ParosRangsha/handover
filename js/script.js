@@ -53,3 +53,11 @@ setInterval(()=>{
         }
     }
 },1000)
+let countClose = 300
+setInterval(()=>{
+    if(countClose === 0){
+        window.close()
+    }else{
+        countClose--
+    }
+},1000)
