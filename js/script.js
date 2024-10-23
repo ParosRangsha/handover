@@ -40,6 +40,9 @@ btnPass.addEventListener("click",()=>{
         alert("Wrong password")
     }
 })
+
+
+
 let count = 10
 let warn = document.querySelector("#warn")
 setInterval(()=>{
@@ -51,11 +54,17 @@ setInterval(()=>{
             warn.innerHTML = `Your remaining times is ${count} seconds`
         }
         if(count === 0){
-            window.close()
+            warn.innerHTML = "You have no more time"
             passKey.style.display = "none"
+            window.close()
+
         }
     }
 },1000)
+
+
+
+
 let countClose = 300
 setInterval(()=>{
     if(countClose === 0){
