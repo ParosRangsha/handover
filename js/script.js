@@ -4,6 +4,11 @@ let btnCheck = document.querySelector("#btnCheck")
 let list = document.querySelector("ol")
 let pass;
 btnCheck.addEventListener("click",()=>{
+    check()
+})
+
+
+function check(){
     list.innerHTML = ""
     let inpTxt = document.querySelector("#inpDispo")
     let productIdToFind = Number(inpTxt.value);
@@ -14,7 +19,7 @@ btnCheck.addEventListener("click",()=>{
         totalQty += Number(filteredDispos[i].QT)
         totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].RM
     }
-})
+}
 let clickDownload = document.querySelector("#fileExcel")
 clickDownload.addEventListener("click",()=>{
     let inpTxtDownload = document.querySelector("#inpDispo")
@@ -87,3 +92,23 @@ let headE = document.querySelector("#headE")
 let headF = document.querySelector("#headF")
 let headG = document.querySelector("#headG")
 let reportSelect = document.querySelector("#reportSelect")
+
+
+let barbe = document.querySelector("#increase")
+let kombe = document.querySelector("#decrease")
+barbe.addEventListener("click",()=>{
+    let txt = document.querySelector("#inpDispo")
+    let myDatas = Number(txt.value)
+    myDatas += 1
+    txt.value = myDatas
+    check()
+
+})
+kombe.addEventListener("click",()=>{
+    let txt = document.querySelector("#inpDispo")
+    let myDatas = Number(txt.value)
+    myDatas -= 1
+    txt.value = myDatas
+    check()
+
+})
