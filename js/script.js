@@ -47,7 +47,9 @@ setInterval(()=>{
        
     }else{
         count--
-        warn.innerHTML = `Your remaining times is ${count} seconds`
+        if(count>=0){
+            warn.innerHTML = `Your remaining times is ${count} seconds`
+        }
         if(count === 0){
             window.close()
         }
