@@ -59,6 +59,8 @@ setInterval(()=>{
 let countClose = 300
 setInterval(()=>{
     if(countClose === 0){
+        user.style.display = "none"
+        passKey.style.display = "none"
         window.close()
     }else{
         countClose--
