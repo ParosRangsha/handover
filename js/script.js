@@ -12,7 +12,7 @@ btnCheck.addEventListener("click",()=>{
     for(i=0;i<filteredDispos.length;i++){
         list.innerHTML += `<li><span>${filteredDispos[i].DS}</span><span>${filteredDispos[i].SR}</span><span>${filteredDispos[i].ER}</span><span>${filteredDispos[i].TR}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span><span>${filteredDispos[i].DT}</span></li>`
         totalQty += Number(filteredDispos[i].QT)
-        totalShow.innerHTML = totalQty + filteredDispos[i].RM
+        totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].RM
     }
 })
 let clickDownload = document.querySelector("#fileExcel")
