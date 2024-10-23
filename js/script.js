@@ -18,6 +18,6 @@ btnCheck.addEventListener("click",()=>{
     let filteredDispos = dispos.filter(d => d.DS === productIdToFind);
     
     for(i=0;i<filteredDispos.length;i++){
-        list.innerHTML += `<li><a href="#">${filteredDispos[i].DS}</a> <a href="#">${filteredDispos[i].SR}</a> <a href="#">${filteredDispos[i].ER}</a>  <a href="#">${filteredDispos[i].TR}</a> <a href="#"> ${filteredDispos[i].QT}</a> <a href="#">${filteredDispos[i].RM}</a> <a href="#">${filteredDispos[i].DT}</a> </li>`
+        list.innerHTML += `<li><span>${filteredDispos[i].DS}</span><span>${filteredDispos[i].SR}</span><span>${filteredDispos[i].ER}</span><span>${filteredDispos[i].TR}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span><span>${filteredDispos[i].DT}</span></li>`
     }
 })

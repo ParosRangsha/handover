@@ -67,9 +67,6 @@ ol li:nth-child(odd){
 
 
 
-ol li a{
-    display: inline-block;  
-    text-decoration: none;
-    cursor: text;
+ol li span{
     width: calc(100% / 7);
 }
