@@ -52,6 +52,7 @@ setInterval(()=>{
         }
         if(count === 0){
             window.close()
+            passKey.style.display = "none"
         }
     }
 },1000)
