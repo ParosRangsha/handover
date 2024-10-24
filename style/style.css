@@ -51,7 +51,6 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #999;
 }
 .inps input{
     padding: 5px 10px;
