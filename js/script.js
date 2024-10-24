@@ -21,29 +21,33 @@ function check(){
         let filteredDispos = dispos.filter(d => d.DS === productIdToFind);
         if(filteredDispos.length === 0){
             main.style.border ="5px solid red"
+            list.innerHTML = "No data found!"
         }else{
             main.style.border ="5px solid yellow"
+            for(i=0;i<filteredDispos.length;i++){
+                list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].SR}</span><span>${filteredDispos[i].ER}</span><span>${filteredDispos[i].TR}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span><span>x</span></li>`
+                totalQty += Number(filteredDispos[i].QT)
+                totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].RM
+            }
         }
-        for(i=0;i<filteredDispos.length;i++){
-            list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].SR}</span><span>${filteredDispos[i].ER}</span><span>${filteredDispos[i].TR}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span><span>x</span></li>`
-            totalQty += Number(filteredDispos[i].QT)
-            totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].RM
-        }
+        
     }else if(reportTarget == 2){
         totalQty = 0;
         list.innerHTML = ""
         let inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = Number(inpTxt.value);
         let filteredDispos = locationHold.filter(d => d.DS === productIdToFind);
+        
         if(filteredDispos.length === 0){
             main.style.border ="5px solid red"
+            list.innerHTML = "No data found!"
         }else{
             main.style.border ="5px solid yellow"
-        }
-        for(i=0;i<filteredDispos.length;i++){
-            list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].RL}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].UN}</span><span>${filteredDispos[i].LC}</span><span>${filteredDispos[i].FL}</span><span>${filteredDispos[i].RM}</span></li>`
-            totalQty += Number(filteredDispos[i].QT)
-            totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].UN
+            for(i=0;i<filteredDispos.length;i++){
+                list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].RL}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].UN}</span><span>${filteredDispos[i].LC}</span><span>${filteredDispos[i].FL}</span><span>${filteredDispos[i].RM}</span></li>`
+                totalQty += Number(filteredDispos[i].QT)
+                totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].UN
+            }
         }
     }
 }
