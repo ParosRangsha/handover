@@ -39,7 +39,7 @@ a{
     display: none;
 }
 .ReportType{
-    width: 750px;
+    width: 100%;
     padding: 10px 0;
     background-color: #777;
     display: flex;
@@ -74,6 +74,7 @@ a{
     padding: 5px 10px;
     margin: 0 10px;
     width: 100px;
+    
 }
 .inps button{
     padding: 5px 10px;
@@ -140,11 +141,13 @@ ol li span{
 .passkey input{
     padding: 10px 20px;
     border-radius: 10px;
+    background: transparent;
 }
 .passkey button{
     padding: 10px 50px;
     font-size: 20px;
     font-weight: 700;
+    border-radius: 10px;
 }
 .passkey #warn{
     color: white;
