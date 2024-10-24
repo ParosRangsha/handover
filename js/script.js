@@ -4,13 +4,7 @@ let btnCheck = document.querySelector("#btnCheck")
 let list = document.querySelector("ol")
 let pass;
 dispos = dispos.concat(october24)
-
-
-
-
-
-
-
+let reportTarget = 1;
 
 
 btnCheck.addEventListener("click",()=>{
@@ -19,18 +13,52 @@ btnCheck.addEventListener("click",()=>{
 
 
 function check(){
-    totalQty = 0;
-    list.innerHTML = ""
-    let inpTxt = document.querySelector("#inpDispo")
-    let productIdToFind = Number(inpTxt.value);
-    let filteredDispos = dispos.filter(d => d.DS === productIdToFind);
-    
-    for(i=0;i<filteredDispos.length;i++){
-        list.innerHTML += `<li><span>${filteredDispos[i].DS}</span><span>${filteredDispos[i].SR}</span><span>${filteredDispos[i].ER}</span><span>${filteredDispos[i].TR}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span><span>${filteredDispos[i].DT}</span></li>`
-        totalQty += Number(filteredDispos[i].QT)
-        totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].RM
+    if(reportTarget === 1){
+        totalQty = 0;
+        list.innerHTML = ""
+        let inpTxt = document.querySelector("#inpDispo")
+        let productIdToFind = Number(inpTxt.value);
+        let filteredDispos = dispos.filter(d => d.DS === productIdToFind);
+        
+        for(i=0;i<filteredDispos.length;i++){
+            list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].SR}</span><span>${filteredDispos[i].ER}</span><span>${filteredDispos[i].TR}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span><span>x</span></li>`
+            totalQty += Number(filteredDispos[i].QT)
+            totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].RM
+        }
+    }else if(reportTarget == 2){
+        totalQty = 0;
+        list.innerHTML = ""
+        let inpTxt = document.querySelector("#inpDispo")
+        let productIdToFind = Number(inpTxt.value);
+        let filteredDispos = locationHold.filter(d => d.DS === productIdToFind);
+        
+        for(i=0;i<filteredDispos.length;i++){
+            list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].RL}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].UN}</span><span>${filteredDispos[i].LC}</span><span>${filteredDispos[i].FL}</span><span>${filteredDispos[i].RM}</span></li>`
+            totalQty += Number(filteredDispos[i].QT)
+            totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].UN
+        }
+
+
+    }else{
+        alert("nothing select")
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let clickDownload = document.querySelector("#fileExcel")
 clickDownload.addEventListener("click",()=>{
     let inpTxtDownload = document.querySelector("#inpDispo")
@@ -122,4 +150,35 @@ kombe.addEventListener("click",()=>{
     txt.value = myDatas
     check()
 
+})
+
+
+
+let btnHandOver = document.querySelector("#btnHandOver")
+btnHandOver.addEventListener("click",()=>{
+    document.querySelector("#maindHead").innerHTML = "Hand Over Report"
+    reportTarget = 1
+    list.innerHTML = ""
+    document.querySelector("#headA").innerHTML = "Date"
+    document.querySelector("#headB").innerHTML = "Start Roll"
+    document.querySelector("#headC").innerHTML = "End Roll"
+    document.querySelector("#headD").innerHTML = "Total Roll"
+    document.querySelector("#headE").innerHTML = "QTY"
+    document.querySelector("#headF").innerHTML = "Unit"
+    document.querySelector("#headG").innerHTML = "Remark"
+    check()
+})
+let btnLocationHold = document.querySelector("#btnLocationHold")
+btnLocationHold.addEventListener("click",()=>{
+    document.querySelector("#maindHead").innerHTML = "Location Hold Report"
+    reportTarget = 2
+    list.innerHTML = ""
+    document.querySelector("#headA").innerHTML = "Date"
+    document.querySelector("#headB").innerHTML = "Roll"
+    document.querySelector("#headC").innerHTML = "QTY"
+    document.querySelector("#headD").innerHTML = "Unit"
+    document.querySelector("#headE").innerHTML = "Location"
+    document.querySelector("#headF").innerHTML = "File"
+    document.querySelector("#headG").innerHTML = "Remark"
+    check()
 })

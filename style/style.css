@@ -14,6 +14,10 @@ a{
     position: sticky;
     top: 0;
     z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .heading{
     width: 750px;
@@ -33,6 +37,20 @@ a{
 }
 .heading p a{
     display: none;
+}
+.ReportType{
+    width: 750px;
+    padding: 10px 0;
+    background-color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.ReportType button{
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 700;
 }
 .inps{
     margin: 0 auto;
