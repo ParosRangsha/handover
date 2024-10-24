@@ -50,6 +50,7 @@ a{
 .inps input{
     padding: 5px 10px;
     margin: 0 10px;
+    width: 30%;
 }
 .inps button{
     padding: 5px 10px;
