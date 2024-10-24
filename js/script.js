@@ -5,7 +5,7 @@ let list = document.querySelector("ol")
 let pass;
 dispos = dispos.concat(october24)
 let reportTarget = 1;
-
+let main = document.querySelector(".main")
 
 btnCheck.addEventListener("click",()=>{
     check()
@@ -19,7 +19,11 @@ function check(){
         let inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = Number(inpTxt.value);
         let filteredDispos = dispos.filter(d => d.DS === productIdToFind);
-        
+        if(filteredDispos.length === 0){
+            main.style.border ="5px solid red"
+        }else{
+            main.style.border ="5px solid yellow"
+        }
         for(i=0;i<filteredDispos.length;i++){
             list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].SR}</span><span>${filteredDispos[i].ER}</span><span>${filteredDispos[i].TR}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span><span>x</span></li>`
             totalQty += Number(filteredDispos[i].QT)
@@ -31,16 +35,16 @@ function check(){
         let inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = Number(inpTxt.value);
         let filteredDispos = locationHold.filter(d => d.DS === productIdToFind);
-        
+        if(filteredDispos.length === 0){
+            main.style.border ="5px solid red"
+        }else{
+            main.style.border ="5px solid yellow"
+        }
         for(i=0;i<filteredDispos.length;i++){
             list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].RL}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].UN}</span><span>${filteredDispos[i].LC}</span><span>${filteredDispos[i].FL}</span><span>${filteredDispos[i].RM}</span></li>`
             totalQty += Number(filteredDispos[i].QT)
             totalShow.innerHTML ="Total: " + totalQty + filteredDispos[i].UN
         }
-
-
-    }else{
-        alert("nothing select")
     }
 }
 
