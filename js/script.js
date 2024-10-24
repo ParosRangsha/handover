@@ -3,6 +3,16 @@ let totalQty = 0
 let btnCheck = document.querySelector("#btnCheck")
 let list = document.querySelector("ol")
 let pass;
+dispos = dispos.concat(october24)
+
+
+
+
+
+
+
+
+
 btnCheck.addEventListener("click",()=>{
     check()
 })
