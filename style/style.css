@@ -47,6 +47,11 @@ a{
 .inps select{
     padding: 5px;
 }
+.inps .inputItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .inps input{
     padding: 5px 10px;
     margin: 0 10px;
