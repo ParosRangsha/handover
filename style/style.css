@@ -79,6 +79,10 @@ a{
 .inps button{
     padding: 5px 10px;
 }
+.inps button:hover{
+    background-color: red;
+    color: white;
+}
 .summary{
     width: 750px;
     background-color: #666;

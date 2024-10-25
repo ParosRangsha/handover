@@ -179,6 +179,8 @@ let reportSelect = document.querySelector("#reportSelect")
 
 
 let btnHandOver = document.querySelector("#btnHandOver")
+let btnLocationHold = document.querySelector("#btnLocationHold")
+let btnShadeHold = document.querySelector("#btnShadeHold")
 btnHandOver.addEventListener("click",()=>{
     document.querySelector("#maindHead").innerHTML = "Hand Over Report"
     reportTarget = 1
@@ -190,9 +192,15 @@ btnHandOver.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "QTY"
     document.querySelector("#headF").innerHTML = "Unit"
     document.querySelector("#headG").innerHTML = "Remark"
+    btnHandOver.style.backgroundColor="red"
+    btnLocationHold.style.backgroundColor="white"
+    btnShadeHold.style.backgroundColor="white"
+    btnHandOver.style.color="white"
+    btnLocationHold.style.color="black"
+    btnShadeHold.style.color="black"
     check()
 })
-let btnLocationHold = document.querySelector("#btnLocationHold")
+
 btnLocationHold.addEventListener("click",()=>{
     document.querySelector("#maindHead").innerHTML = "Location Hold Report"
     reportTarget = 2
@@ -204,9 +212,15 @@ btnLocationHold.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "Location"
     document.querySelector("#headF").innerHTML = "File"
     document.querySelector("#headG").innerHTML = "Remark"
+    btnHandOver.style.backgroundColor="white"
+    btnLocationHold.style.backgroundColor="red"
+    btnShadeHold.style.backgroundColor="white"
+    btnHandOver.style.color="black"
+    btnLocationHold.style.color="white"
+    btnShadeHold.style.color="black"
     check()
 })
-let btnShadeHold = document.querySelector("#btnShadeHold")
+
 btnShadeHold.addEventListener("click",()=>{
     document.querySelector("#maindHead").innerHTML = "Shade Hold Report"
     reportTarget = 3
@@ -218,5 +232,11 @@ btnShadeHold.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "Delay"
     document.querySelector("#headF").innerHTML = "Status"
     document.querySelector("#headG").innerHTML = "Remark"
+    btnHandOver.style.backgroundColor="white"
+    btnLocationHold.style.backgroundColor="white"
+    btnShadeHold.style.backgroundColor="red"
+    btnHandOver.style.color="black"
+    btnLocationHold.style.color="black"
+    btnShadeHold.style.color="white"
     check()
 })
