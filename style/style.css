@@ -54,12 +54,12 @@ a{
 }
 .inps{
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px 20px;
     background-color: #333;
     width: 750px;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
 }
 .inps select{
@@ -78,6 +78,23 @@ a{
 }
 .inps button{
     padding: 5px 10px;
+}
+.summary{
+    width: 750px;
+    background-color: #666;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.summary .datas{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 .main{
     width: 750px;

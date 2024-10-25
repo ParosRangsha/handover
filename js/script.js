@@ -42,6 +42,7 @@ function check(){
         if(filteredDispos.length === 0){
             main.style.border ="5px solid red"
             list.innerHTML = "No data found!"
+            totalShow.innerHTML =""
 
         }else{
             main.style.border ="5px solid yellow"
