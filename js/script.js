@@ -97,11 +97,17 @@ function check(){
 let clickDownload = document.querySelector("#fileExcel")
 clickDownload.addEventListener("click",()=>{
     let inpTxtDownload = document.querySelector("#inpDispo")
-    let excelDownload = document.querySelector("#excel")
+    let HOexcel = document.querySelector("#HOexcel")
+    let SHexcel = document.querySelector("#SHexcel")
+    let LHexcel = document.querySelector("#LHexcel")
     if(inpTxtDownload.value == "asdf"){
-        excelDownload.style.display= "inline-block"
+        HOexcel.style.display= "inline-block"
+        SHexcel.style.display= "inline-block"
+        LHexcel.style.display= "inline-block"
     }else{
-        excelDownload.style.display= "none"
+        HOexcel.style.display= "none"
+        SHexcel.style.display= "none"
+        LHexcel.style.display= "none"
     }
 })
 
