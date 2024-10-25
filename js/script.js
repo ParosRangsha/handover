@@ -1,15 +1,35 @@
+let main = document.querySelector(".main")
 let totalShow = document.querySelector("#totalQty")
 let totalQty = 0
-let btnCheck = document.querySelector("#btnCheck")
 let list = document.querySelector("ol")
 let pass;
-dispos = dispos.concat(october24)
 let reportTarget = 1;
-let main = document.querySelector(".main")
+dispos = dispos.concat(october24)
+
+
+// input three buttons//
+let btnCheck = document.querySelector("#btnCheck")
+let barbe = document.querySelector("#increase")
+let kombe = document.querySelector("#decrease")
 
 btnCheck.addEventListener("click",()=>{
     check()
 })
+barbe.addEventListener("click",()=>{
+    let txt = document.querySelector("#inpDispo")
+    let myDatas = Number(txt.value)
+    myDatas += 1
+    txt.value = myDatas
+    check()
+})
+kombe.addEventListener("click",()=>{
+    let txt = document.querySelector("#inpDispo")
+    let myDatas = Number(txt.value)
+    myDatas -= 1
+    txt.value = myDatas
+    check()
+})
+//input three button stop here//
 
 
 function check(){
@@ -22,19 +42,14 @@ function check(){
         if(filteredDispos.length === 0){
             main.style.border ="5px solid red"
             list.innerHTML = "No data found!"
+
         }else{
             main.style.border ="5px solid yellow"
             for(i=0;i<filteredDispos.length;i++){
                 list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].SR}</span><span>${filteredDispos[i].ER}</span><span>${filteredDispos[i].TR}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span><span>x</span></li>`
                 totalQty += Number(filteredDispos[i].QT)
+                totalShow.innerHTML ="Total: " + totalQty +  filteredDispos[i].RM
             }
-        }
-        if(reportTarget === 1){
-            totalShow.innerHTML ="Total: " + totalQty + " " + filteredDispos[i].RM
-        }else if(reportTarget === 2){
-            totalShow.innerHTML ="Total: " + totalQty +  filteredDispos[i].UN
-        }else if(reportTarget === 3){
-            totalShow.innerHTML ="Total: " + totalQty
         }
         
     }else if(reportTarget == 2){
@@ -47,19 +62,14 @@ function check(){
         if(filteredDispos.length === 0){
             main.style.border ="5px solid red"
             list.innerHTML = "No data found!"
+            totalShow.innerHTML =""
         }else{
             main.style.border ="5px solid yellow"
             for(i=0;i<filteredDispos.length;i++){
                 list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].RL}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].UN}</span><span>${filteredDispos[i].LC}</span><span>${filteredDispos[i].FL}</span><span>${filteredDispos[i].RM}</span></li>`
                 totalQty += Number(filteredDispos[i].QT) 
+                totalShow.innerHTML ="Total: " + totalQty +  filteredDispos[i].UN
             }
-        }
-        if(reportTarget === 1){
-            totalShow.innerHTML ="Total: " + totalQty + " " + filteredDispos[i].RM
-        }else if(reportTarget === 2){
-            totalShow.innerHTML ="Total: " + totalQty +  filteredDispos[i].UN
-        }else if(reportTarget === 3){
-            totalShow.innerHTML ="Total: " + totalQty
         }
     }else if(reportTarget == 3){
         totalQty = 0;
@@ -71,38 +81,17 @@ function check(){
         if(filteredDispos.length === 0){
             main.style.border ="5px solid red"
             list.innerHTML = "No data found!"
+            totalShow.innerHTML =""
         }else{
             main.style.border ="5px solid yellow"
             for(i=0;i<filteredDispos.length;i++){
                 list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].LT}</span><span>${filteredDispos[i].FL}</span><span>${filteredDispos[i].DL}</span><span>${filteredDispos[i].RM}</span><span>x</span></li>`
                 totalQty += Number(filteredDispos[i].QT)
-                
+                totalShow.innerHTML = "Total: " + totalQty
             }
-        }
-        if(reportTarget === 1){
-            totalShow.innerHTML = "Total: " + totalQty + " " + filteredDispos[i].RM
-        }else if(reportTarget === 2){
-            totalShow.innerHTML = "Total: " + totalQty +  filteredDispos[i].UN
-        }else if(reportTarget === 3){
-            totalShow.innerHTML = "Total: " + totalQty
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 let clickDownload = document.querySelector("#fileExcel")
 clickDownload.addEventListener("click",()=>{
@@ -178,24 +167,7 @@ let headG = document.querySelector("#headG")
 let reportSelect = document.querySelector("#reportSelect")
 
 
-let barbe = document.querySelector("#increase")
-let kombe = document.querySelector("#decrease")
-barbe.addEventListener("click",()=>{
-    let txt = document.querySelector("#inpDispo")
-    let myDatas = Number(txt.value)
-    myDatas += 1
-    txt.value = myDatas
-    check()
 
-})
-kombe.addEventListener("click",()=>{
-    let txt = document.querySelector("#inpDispo")
-    let myDatas = Number(txt.value)
-    myDatas -= 1
-    txt.value = myDatas
-    check()
-
-})
 
 
 
@@ -211,7 +183,6 @@ btnHandOver.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "QTY"
     document.querySelector("#headF").innerHTML = "Unit"
     document.querySelector("#headG").innerHTML = "Remark"
-    totalQty = 0
     check()
 })
 let btnLocationHold = document.querySelector("#btnLocationHold")
@@ -226,7 +197,6 @@ btnLocationHold.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "Location"
     document.querySelector("#headF").innerHTML = "File"
     document.querySelector("#headG").innerHTML = "Remark"
-    totalQty = 0
     check()
 })
 let btnShadeHold = document.querySelector("#btnShadeHold")
@@ -241,6 +211,5 @@ btnShadeHold.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "Delay"
     document.querySelector("#headF").innerHTML = "Status"
     document.querySelector("#headG").innerHTML = "Remark"
-    totalQty = 0
     check()
 })
