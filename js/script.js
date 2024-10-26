@@ -1,3 +1,4 @@
+document.querySelector("#dispos").innerHTML
 let main = document.querySelector(".main")
 let totalShow = document.querySelector("#totalQty")
 let totalQty = 0
@@ -240,3 +241,4 @@ btnShadeHold.addEventListener("click",()=>{
     btnShadeHold.style.color="white"
     check()
 })
+
