@@ -92,6 +92,26 @@ function check(){
                 totalShow.innerHTML = "Total: " + totalQty
             }
         }
+    }else if(reportTarget == 4){
+        totalQty = 0;
+        list.innerHTML = ""
+        let inpTxt = document.querySelector("#inpDispo")
+        let productIdToFind = Number(inpTxt.value);
+        let filteredDispos = fabricReceive.filter(d => d.DS === productIdToFind);
+        console.log(filteredDispos[1]);
+        
+        if(filteredDispos.length === 0){
+            main.style.border ="5px solid red"
+            list.innerHTML = "No data found!"
+            totalShow.innerHTML =""
+        }else{
+            main.style.border ="5px solid yellow"
+            for(i=0;i<filteredDispos.length;i++){
+                list.innerHTML += `<li><span>${filteredDispos[i].DS}</span><span>${filteredDispos[i].BY}</span><span>${filteredDispos[i].OQ}</span><span>${filteredDispos[i].RQ}</span><span>${filteredDispos[i].NQ}</span><span>${filteredDispos[i].UQ}</span></li>`
+                totalQty += Number(filteredDispos[i].QT)
+                totalShow.innerHTML = "Total: " + totalQty
+            }
+        }
     }
 }
 
@@ -182,6 +202,7 @@ let reportSelect = document.querySelector("#reportSelect")
 let btnHandOver = document.querySelector("#btnHandOver")
 let btnLocationHold = document.querySelector("#btnLocationHold")
 let btnShadeHold = document.querySelector("#btnShadeHold")
+let btnReceive = document.querySelector("#btnStoreReceive")
 btnHandOver.addEventListener("click",()=>{
     document.querySelector("#maindHead").innerHTML = "Hand Over Report"
     reportTarget = 1
@@ -239,6 +260,27 @@ btnShadeHold.addEventListener("click",()=>{
     btnHandOver.style.color="black"
     btnLocationHold.style.color="black"
     btnShadeHold.style.color="white"
+    check()
+})
+btnReceive.addEventListener("click",()=>{
+    document.querySelector("#maindHead").innerHTML = "Store Fabric Receive Report"
+    reportTarget = 4
+    list.innerHTML = ""
+    document.querySelector("#headA").innerHTML = "Dispo"
+    document.querySelector("#headB").innerHTML = "Buyer"
+    document.querySelector("#headC").innerHTML = "Order QTY"
+    document.querySelector("#headD").innerHTML = "Receive QTy"
+    document.querySelector("#headE").innerHTML = "Need QTQ"
+    document.querySelector("#headF").innerHTML = "Over QTY"
+    document.querySelector("#headG").innerHTML = ""
+    btnHandOver.style.backgroundColor="white"
+    btnLocationHold.style.backgroundColor="white"
+    btnShadeHold.style.backgroundColor="white"
+    btnHandOver.style.color="black"
+    btnLocationHold.style.color="black"
+    btnShadeHold.style.color="black"
+    btnReceive.style.backgroundColor="red"
+    btnReceive.style.backgroundColor = "white"
     check()
 })
 
