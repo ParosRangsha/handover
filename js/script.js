@@ -98,7 +98,6 @@ function check(){
         let inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = Number(inpTxt.value);
         let filteredDispos = fabricReceive.filter(d => d.DS === productIdToFind);
-        console.log(filteredDispos[1]);
         
         if(filteredDispos.length === 0){
             main.style.border ="5px solid red"
@@ -108,6 +107,29 @@ function check(){
             main.style.border ="5px solid yellow"
             for(i=0;i<filteredDispos.length;i++){
                 list.innerHTML += `<li><span>${filteredDispos[i].DS}</span><span>${filteredDispos[i].BY}</span><span>${filteredDispos[i].OQ}</span><span>${filteredDispos[i].RQ}</span><span>${filteredDispos[i].NQ}</span><span>${filteredDispos[i].UQ}</span></li>`
+                totalQty += Number(filteredDispos[i].QT)
+                totalShow.innerHTML = "Total: " + totalQty
+            }
+        }
+        
+    }else if(reportTarget == 5){
+        totalQty = 0;
+        list.innerHTML = ""
+        let inpTxt = document.querySelector("#inpDispo")
+        let productIdToFind = inpTxt.value;
+        let filteredDispos = excess.filter(d => d.DS === productIdToFind);
+        
+        
+        
+        if(filteredDispos.length === 0){
+            main.style.border ="5px solid red"
+            list.innerHTML = "No data found!"
+            totalShow.innerHTML =""
+        }else{
+            main.style.border ="5px solid yellow"
+            for(i=0;i<filteredDispos.length;i++){
+                console.log(filteredDispos[i])
+                list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].DS}</span><span>${filteredDispos[i].RL}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].RM}</span></li>`
                 totalQty += Number(filteredDispos[i].QT)
                 totalShow.innerHTML = "Total: " + totalQty
             }
@@ -203,6 +225,8 @@ let btnHandOver = document.querySelector("#btnHandOver")
 let btnLocationHold = document.querySelector("#btnLocationHold")
 let btnShadeHold = document.querySelector("#btnShadeHold")
 let btnReceive = document.querySelector("#btnStoreReceive")
+let btnExcess = document.querySelector("#btnExcess")
+
 btnHandOver.addEventListener("click",()=>{
     document.querySelector("#maindHead").innerHTML = "Hand Over Report"
     reportTarget = 1
@@ -214,12 +238,22 @@ btnHandOver.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "QTY"
     document.querySelector("#headF").innerHTML = "Unit"
     document.querySelector("#headG").innerHTML = "Remark"
-    btnHandOver.style.backgroundColor="red"
-    btnLocationHold.style.backgroundColor="white"
-    btnShadeHold.style.backgroundColor="white"
-    btnHandOver.style.color="white"
-    btnLocationHold.style.color="black"
-    btnShadeHold.style.color="black"
+
+    btnHandOver.style.backgroundColor= "red"
+    btnHandOver.style.color = "white"
+
+    btnLocationHold.style.backgroundColor= "white"
+    btnLocationHold.style.color = "black"
+
+    btnShadeHold.style.backgroundColor= "white"
+    btnShadeHold.style.color = "black"
+
+    btnReceive.style.backgroundColor= "white"
+    btnReceive.style.color = "black"
+
+    btnExcess.style.backgroundColor= "white"
+    btnExcess.style.color = "black"
+
     check()
 })
 
@@ -234,12 +268,20 @@ btnLocationHold.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "Location"
     document.querySelector("#headF").innerHTML = "File"
     document.querySelector("#headG").innerHTML = "Remark"
-    btnHandOver.style.backgroundColor="white"
-    btnLocationHold.style.backgroundColor="red"
-    btnShadeHold.style.backgroundColor="white"
-    btnHandOver.style.color="black"
-    btnLocationHold.style.color="white"
-    btnShadeHold.style.color="black"
+    btnHandOver.style.backgroundColor= "white"
+    btnHandOver.style.color = "black"
+
+    btnLocationHold.style.backgroundColor= "red"
+    btnLocationHold.style.color = "white"
+
+    btnShadeHold.style.backgroundColor= "white"
+    btnShadeHold.style.color = "black"
+
+    btnReceive.style.backgroundColor= "white"
+    btnReceive.style.color = "black"
+
+    btnExcess.style.backgroundColor= "white"
+    btnExcess.style.color = "black"
     check()
 })
 
@@ -254,12 +296,20 @@ btnShadeHold.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "Delay"
     document.querySelector("#headF").innerHTML = "Status"
     document.querySelector("#headG").innerHTML = "Remark"
-    btnHandOver.style.backgroundColor="white"
-    btnLocationHold.style.backgroundColor="white"
-    btnShadeHold.style.backgroundColor="red"
-    btnHandOver.style.color="black"
-    btnLocationHold.style.color="black"
-    btnShadeHold.style.color="white"
+    btnHandOver.style.backgroundColor= "white"
+    btnHandOver.style.color = "black"
+
+    btnLocationHold.style.backgroundColor= "white"
+    btnLocationHold.style.color = "black"
+
+    btnShadeHold.style.backgroundColor= "red"
+    btnShadeHold.style.color = "white"
+
+    btnReceive.style.backgroundColor= "white"
+    btnReceive.style.color = "black"
+
+    btnExcess.style.backgroundColor= "white"
+    btnExcess.style.color = "black"
     check()
 })
 btnReceive.addEventListener("click",()=>{
@@ -273,14 +323,47 @@ btnReceive.addEventListener("click",()=>{
     document.querySelector("#headE").innerHTML = "Need QTQ"
     document.querySelector("#headF").innerHTML = "Over QTY"
     document.querySelector("#headG").innerHTML = ""
-    btnHandOver.style.backgroundColor="white"
-    btnLocationHold.style.backgroundColor="white"
-    btnShadeHold.style.backgroundColor="white"
-    btnHandOver.style.color="black"
-    btnLocationHold.style.color="black"
-    btnShadeHold.style.color="black"
-    btnReceive.style.backgroundColor="red"
-    btnReceive.style.backgroundColor = "white"
+    btnHandOver.style.backgroundColor= "white"
+    btnHandOver.style.color = "black"
+
+    btnLocationHold.style.backgroundColor= "white"
+    btnLocationHold.style.color = "black"
+
+    btnShadeHold.style.backgroundColor= "white"
+    btnShadeHold.style.color = "black"
+
+    btnReceive.style.backgroundColor= "red"
+    btnReceive.style.color = "white"
+
+    btnExcess.style.backgroundColor= "white"
+    btnExcess.style.color = "black"
+    check()
+})
+btnExcess.addEventListener("click",()=>{
+    document.querySelector("#maindHead").innerHTML = "Fabric Excess Report"
+    reportTarget = 5
+    list.innerHTML = ""
+    document.querySelector("#headA").innerHTML = "Date"
+    document.querySelector("#headB").innerHTML = "Dispo"
+    document.querySelector("#headC").innerHTML = "Roll"
+    document.querySelector("#headD").innerHTML = "QTy"
+    document.querySelector("#headE").innerHTML = "Remark"
+    document.querySelector("#headF").innerHTML = ""
+    document.querySelector("#headG").innerHTML = ""
+    btnHandOver.style.backgroundColor= "white"
+    btnHandOver.style.color = "black"
+
+    btnLocationHold.style.backgroundColor= "white"
+    btnLocationHold.style.color = "black"
+
+    btnShadeHold.style.backgroundColor= "white"
+    btnShadeHold.style.color = "black"
+
+    btnReceive.style.backgroundColor= "white"
+    btnReceive.style.color = "black"
+
+    btnExcess.style.backgroundColor= "red"
+    btnExcess.style.color = "white"
     check()
 })
 
