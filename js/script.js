@@ -1,4 +1,4 @@
-document.querySelector("#dispos").innerHTML
+let inpTxt = document.querySelector("#inpDispo")
 let main = document.querySelector(".main")
 let totalShow = document.querySelector("#totalQty")
 let totalQty = 0
@@ -6,7 +6,6 @@ let list = document.querySelector("ol")
 let pass;
 let reportTarget = 1;
 dispos = dispos.concat(october24)
-
 
 // input three buttons//
 let btnCheck = document.querySelector("#btnCheck")
@@ -30,6 +29,9 @@ kombe.addEventListener("click",()=>{
     txt.value = myDatas
     check()
 })
+inpTxt.addEventListener("keydown",()=>{
+    check()
+})
 //input three button stop here//
 
 
@@ -37,7 +39,7 @@ function check(){
     if(reportTarget === 1){
         totalQty = 0;
         list.innerHTML = ""
-        let inpTxt = document.querySelector("#inpDispo")
+        inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = Number(inpTxt.value);
         let filteredDispos = dispos.filter(d => d.DS === productIdToFind);
         if(filteredDispos.length === 0){
@@ -57,7 +59,7 @@ function check(){
     }else if(reportTarget == 2){
         totalQty = 0;
         list.innerHTML = ""
-        let inpTxt = document.querySelector("#inpDispo")
+        inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = Number(inpTxt.value);
         let filteredDispos = locationHold.filter(d => d.DS === productIdToFind);
         
@@ -76,7 +78,7 @@ function check(){
     }else if(reportTarget == 3){
         totalQty = 0;
         list.innerHTML = ""
-        let inpTxt = document.querySelector("#inpDispo")
+        inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = Number(inpTxt.value);
         let filteredDispos = shadeHold.filter(d => d.DS === productIdToFind);
         
@@ -95,7 +97,7 @@ function check(){
     }else if(reportTarget == 4){
         totalQty = 0;
         list.innerHTML = ""
-        let inpTxt = document.querySelector("#inpDispo")
+        inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = Number(inpTxt.value);
         let filteredDispos = fabricReceive.filter(d => d.DS === productIdToFind);
         
@@ -115,7 +117,7 @@ function check(){
     }else if(reportTarget == 5){
         totalQty = 0;
         list.innerHTML = ""
-        let inpTxt = document.querySelector("#inpDispo")
+        inpTxt = document.querySelector("#inpDispo")
         let productIdToFind = inpTxt.value;
         let filteredDispos = excess.filter(d => d.DS === productIdToFind);
         
@@ -346,7 +348,7 @@ btnExcess.addEventListener("click",()=>{
     document.querySelector("#headA").innerHTML = "Date"
     document.querySelector("#headB").innerHTML = "Dispo"
     document.querySelector("#headC").innerHTML = "Roll"
-    document.querySelector("#headD").innerHTML = "QTy"
+    document.querySelector("#headD").innerHTML = "QTY"
     document.querySelector("#headE").innerHTML = "Remark"
     document.querySelector("#headF").innerHTML = ""
     document.querySelector("#headG").innerHTML = ""
