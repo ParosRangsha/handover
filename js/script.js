@@ -165,7 +165,7 @@ let user = document.querySelector(".user")
 let passKey = document.querySelector(".passkey")
 
 btnPass.addEventListener("click",()=>{
-    if(inpPass.value === "421"){
+    if(inpPass.value === "421" || inpPass.value === "Paros"){
         user.style.display = "block"
         passKey.style.display = "none"
         pass = 421
@@ -173,6 +173,17 @@ btnPass.addEventListener("click",()=>{
         alert("Wrong password")
     }
 })
+inpPass.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        if(inpPass.value === "421" || inpPass.value === "Paros0"){
+            user.style.display = "block"
+            passKey.style.display = "none"
+            pass = 421
+        }else{
+            alert("Wrong password")
+        }
+    }
+});
 
 
 
