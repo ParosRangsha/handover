@@ -175,7 +175,7 @@ btnPass.addEventListener("click",()=>{
 })
 inpPass.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        if(inpPass.value === "421" || inpPass.value === "Paros0"){
+        if(inpPass.value === "421" || inpPass.value === "Paros"){
             user.style.display = "block"
             passKey.style.display = "none"
             pass = 421
