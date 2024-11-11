@@ -5,7 +5,7 @@ let totalQty = 0
 let list = document.querySelector("ol")
 let pass;
 let reportTarget = 1;
-dispos = dispos.concat(october24)
+dispos = dispos.concat(november24)
 
 // input three buttons//
 let btnCheck = document.querySelector("#btnCheck")
