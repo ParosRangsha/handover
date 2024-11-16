@@ -7,6 +7,13 @@ let pass;
 let reportTarget = 1;
 dispos = dispos.concat(november24)
 
+
+let btnHandOver = document.querySelector("#btnHandOver")
+let btnLocationHold = document.querySelector("#btnLocationHold")
+let btnShadeHold = document.querySelector("#btnShadeHold")
+let btnReceive = document.querySelector("#btnStoreReceive")
+let btnExcess = document.querySelector("#btnExcess")
+
 // input three buttons//
 let btnCheck = document.querySelector("#btnCheck")
 let barbe = document.querySelector("#increase")
@@ -165,10 +172,16 @@ let user = document.querySelector(".user")
 let passKey = document.querySelector(".passkey")
 
 btnPass.addEventListener("click",()=>{
-    if(inpPass.value === "421" || inpPass.value === "Paros"){
+    if(inpPass.value === "421"){
         user.style.display = "block"
         passKey.style.display = "none"
         pass = 421
+    }else if(inpPass.value === "Paros"){
+        user.style.display = "block"
+        passKey.style.display = "none"
+        pass = 421
+        btnShadeHold.style.display = "none"
+        btnLocationHold.style.display = "none"
     }else{
         alert("Wrong password")
     }
@@ -233,12 +246,6 @@ let reportSelect = document.querySelector("#reportSelect")
 
 
 
-
-let btnHandOver = document.querySelector("#btnHandOver")
-let btnLocationHold = document.querySelector("#btnLocationHold")
-let btnShadeHold = document.querySelector("#btnShadeHold")
-let btnReceive = document.querySelector("#btnStoreReceive")
-let btnExcess = document.querySelector("#btnExcess")
 
 btnHandOver.addEventListener("click",()=>{
     document.querySelector("#maindHead").innerHTML = "Hand Over Report"
