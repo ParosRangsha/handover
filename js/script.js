@@ -188,10 +188,16 @@ btnPass.addEventListener("click",()=>{
 })
 inpPass.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        if(inpPass.value === "421" || inpPass.value === "Paros"){
+        if(inpPass.value === "421"){
             user.style.display = "block"
             passKey.style.display = "none"
             pass = 421
+        }else if(inpPass.value === "Paros"){
+            user.style.display = "block"
+            passKey.style.display = "none"
+            pass = 421
+            btnShadeHold.style.display = "none"
+            btnLocationHold.style.display = "none"
         }else{
             alert("Wrong password")
         }
