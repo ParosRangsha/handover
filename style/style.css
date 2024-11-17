@@ -172,3 +172,6 @@ ol li span{
 .passkey #warn{
     color: white;
 }
+#btnLocationHold, #btnHandOver, #btnShadeHold, #btnStoreReceive, #btnExcess{
+    display: none;
+}
