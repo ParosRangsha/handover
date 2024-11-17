@@ -175,35 +175,21 @@ btnPass.addEventListener("click",()=>{
     if(inpPass.value === "421"){
         user.style.display = "block"
         passKey.style.display = "none"
+        btnHandOver.style.display = "block"
         btnLocationHold.style.display = "block"
         btnShadeHold.style.display = "block"
+        btnReceive.style.display = "block"
+        btnExcess.style.display = "block"
         pass = 421
     }else if(inpPass.value === "Paros"){
         user.style.display = "block"
         passKey.style.display = "none"
+        btnHandOver.style.display = "block"
         pass = 421
     }else{
         alert("Wrong password")
     }
 })
-inpPass.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        if(inpPass.value === "421"){
-            user.style.display = "block"
-            passKey.style.display = "none"
-            pass = 421
-        }else if(inpPass.value === "Paros"){
-            user.style.display = "block"
-            passKey.style.display = "none"
-            pass = 421
-            btnShadeHold.style.display = "none"
-            btnLocationHold.style.display = "none"
-        }else{
-            alert("Wrong password")
-        }
-    }
-});
-
 
 
 let count = 10
