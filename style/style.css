@@ -175,3 +175,6 @@ ol li span{
 #btnLocationHold, #btnHandOver, #btnShadeHold, #btnStoreReceive, #btnExcess{
     display: none;
 }
+#inpPass{
+    text-align: center;
+}
