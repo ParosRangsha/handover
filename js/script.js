@@ -213,7 +213,7 @@ inpPass.addEventListener("keypress", function(event) {
   });
 
 
-let count = 10
+let count = 20
 let warn = document.querySelector("#warn")
 setInterval(()=>{
     if(pass === 421){
@@ -235,7 +235,7 @@ setInterval(()=>{
 
 
 
-let countClose = 300
+let countClose = 1800
 setInterval(()=>{
     if(countClose === 0){
         window.close()
