@@ -5,7 +5,7 @@ let totalQty = 0
 let list = document.querySelector("ol")
 let pass;
 let reportTarget = 1;
-dispos = dispos.concat(november24)
+dispos = dispos.concat(Jan25toRunning)
 
 
 let btnHandOver = document.querySelector("#btnHandOver")
