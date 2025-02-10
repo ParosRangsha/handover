@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+body{
+    background-image: url(https://www.baltana.com/files/wallpapers-5/Pattern-Background-HD-Desktop-Wallpaper-16487.jpg);
+    background-size: cover;
+}
 .user{
     display: none;
 }
@@ -103,6 +107,7 @@ a{
 .main{
     width: 750px;
     margin: 0 auto 100px;
+    background-color: #ddd;
 }
 ul{
     margin: 0 auto;
