@@ -24,6 +24,8 @@
         width: 100% !important;
     }
     .passkey{
+        background-size: cover;
+        background-repeat: no-repeat;
         background: url(https://media.tenor.com/namx2YhyYU8AAAAM/happy-birthday.gif);
     }
 }
