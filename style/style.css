@@ -24,7 +24,7 @@ a{
     flex-direction: column;
 }
 .heading{
-    width: 750px;
+    width: 950px;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -43,7 +43,7 @@ a{
     display: none;
 }
 .ReportType{
-    width: 750px;
+    width: 950px;
     padding: 10px 0;
     background-color: #777;
     display: flex;
@@ -60,7 +60,7 @@ a{
     margin: 0 auto;
     padding: 10px 20px;
     background-color: #333;
-    width: 750px;
+    width: 950px;
     color: white;
     display: flex;
     justify-content: right;
@@ -88,7 +88,7 @@ a{
     color: white;
 }
 .summary{
-    width: 750px;
+    width: 950px;
     background-color: #666;
     color: white;
     display: flex;
@@ -105,13 +105,13 @@ a{
     color: white;
 }
 .main{
-    width: 750px;
+    width: 950px;
     margin: 0 auto 100px;
     background-color: #ddd;
 }
 ul{
     margin: 0 auto;
-    width: 750px;
+    width: 950px;
     list-style: none;
     display: flex;
     justify-content: space-between;
