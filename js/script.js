@@ -96,7 +96,7 @@ function check(){
         }else{
             main.style.border ="5px solid yellow"
             for(i=0;i<filteredDispos.length;i++){
-                list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].LT}</span><span>${filteredDispos[i].FL}</span><span>${filteredDispos[i].DL}D</span><span>${filteredDispos[i].RM}</span><span>x</span></li>`
+                list.innerHTML += `<li><span>${filteredDispos[i].DT}</span><span>${filteredDispos[i].BU}</span><span>${filteredDispos[i].QT}</span><span>${filteredDispos[i].LT}</span><span>${filteredDispos[i].FL}</span><span>${filteredDispos[i].DL}D</span><span>${filteredDispos[i].RM}</span></li>`
                 totalQty += Number(filteredDispos[i].QT)
                 totalShow.innerHTML = "Total: " + totalQty
             }
@@ -323,11 +323,11 @@ btnShadeHold.addEventListener("click",()=>{
     reportTarget = 3
     list.innerHTML = ""
     document.querySelector("#headA").innerHTML = "Date"
-    document.querySelector("#headB").innerHTML = "QTY"
-    document.querySelector("#headC").innerHTML = "Lot"
-    document.querySelector("#headD").innerHTML = "File"
-    document.querySelector("#headE").innerHTML = "Delay"
-    document.querySelector("#headF").innerHTML = "Status"
+    document.querySelector("#headB").innerHTML = "Buyer"
+    document.querySelector("#headC").innerHTML = "QTY"
+    document.querySelector("#headD").innerHTML = "Lot"
+    document.querySelector("#headE").innerHTML = "File"
+    document.querySelector("#headF").innerHTML = "Delay"
     document.querySelector("#headG").innerHTML = "Remark"
     btnHandOver.style.backgroundColor= "white"
     btnHandOver.style.color = "black"
