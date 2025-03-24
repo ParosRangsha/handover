@@ -121,6 +121,9 @@ ul li{
     padding: 10px 0;
     width: calc(100% / 7);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     border: 1px solid white;
 }
