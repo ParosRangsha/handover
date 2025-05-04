@@ -146,23 +146,6 @@ function check(){
     }
 }
 
-let clickDownload = document.querySelector("#fileExcel")
-clickDownload.addEventListener("click",()=>{
-    let inpTxtDownload = document.querySelector("#inpDispo")
-    let HOexcel = document.querySelector("#HOexcel")
-    let SHexcel = document.querySelector("#SHexcel")
-    let LHexcel = document.querySelector("#LHexcel")
-    if(inpTxtDownload.value == "asdf"){
-        HOexcel.style.display= "inline-block"
-        SHexcel.style.display= "inline-block"
-        LHexcel.style.display= "inline-block"
-    }else{
-        HOexcel.style.display= "none"
-        SHexcel.style.display= "none"
-        LHexcel.style.display= "none"
-    }
-})
-
 
 
 
