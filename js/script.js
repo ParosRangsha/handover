@@ -155,7 +155,7 @@ let user = document.querySelector(".user")
 let passKey = document.querySelector(".passkey")
 
 btnPass.addEventListener("click",()=>{
-    if(inpPass.value === "421"){
+    if(inpPass.value === "finals"){
         user.style.display = "block"
         passKey.style.display = "none"
         btnHandOver.style.display = "block"
@@ -163,11 +163,6 @@ btnPass.addEventListener("click",()=>{
         btnShadeHold.style.display = "block"
         btnReceive.style.display = "block"
         btnExcess.style.display = "block"
-        pass = 421
-    }else if(inpPass.value === "Paros"){
-        user.style.display = "block"
-        passKey.style.display = "none"
-        btnHandOver.style.display = "block"
         pass = 421
     }else{
         alert("Wrong password")
@@ -183,11 +178,6 @@ inpPass.addEventListener("keypress", function(event) {
             btnShadeHold.style.display = "block"
             btnReceive.style.display = "block"
             btnExcess.style.display = "block"
-            pass = 421
-        }else if(inpPass.value === "Paros"){
-            user.style.display = "block"
-            passKey.style.display = "none"
-            btnHandOver.style.display = "block"
             pass = 421
         }else{
             alert("Wrong password")
