@@ -163,14 +163,14 @@ btnPass.addEventListener("click",()=>{
         btnShadeHold.style.display = "block"
         btnReceive.style.display = "block"
         btnExcess.style.display = "block"
-        pass = 421
+        pass = "finals"
     }else{
         alert("Wrong password")
     }
 })
 inpPass.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
-        if(inpPass.value === "421"){
+        if(inpPass.value === "finals"){
             user.style.display = "block"
             passKey.style.display = "none"
             btnHandOver.style.display = "block"
@@ -178,7 +178,7 @@ inpPass.addEventListener("keypress", function(event) {
             btnShadeHold.style.display = "block"
             btnReceive.style.display = "block"
             btnExcess.style.display = "block"
-            pass = 421
+            pass = "finals"
         }else{
             alert("Wrong password")
         }
@@ -189,7 +189,7 @@ inpPass.addEventListener("keypress", function(event) {
 let count = 20
 let warn = document.querySelector("#warn")
 setInterval(()=>{
-    if(pass === 421){
+    if(pass === "finals"){
        
     }else{
         count--
