@@ -183,7 +183,7 @@ inpPass.addEventListener("keypress", function(event) {
             alert("Wrong password")
         }
     }
-  });
+});
 
 
 let count = 20
