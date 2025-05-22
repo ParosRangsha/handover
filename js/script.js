@@ -168,22 +168,22 @@ btnPass.addEventListener("click",()=>{
         alert("Wrong password")
     }
 })
-inpPass.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        if(inpPass.value === "finals"){
-            user.style.display = "block"
-            passKey.style.display = "none"
-            btnHandOver.style.display = "block"
-            btnLocationHold.style.display = "block"
-            btnShadeHold.style.display = "block"
-            btnReceive.style.display = "block"
-            btnExcess.style.display = "block"
-            pass = "finals"
-        }else{
-            alert("Wrong password")
-        }
-    }
-});
+// inpPass.addEventListener("keypress", function(event) {
+//     if (event.key === "Enter") {
+//         if(inpPass.value === "finals"){
+//             user.style.display = "block"
+//             passKey.style.display = "none"
+//             btnHandOver.style.display = "block"
+//             btnLocationHold.style.display = "block"
+//             btnShadeHold.style.display = "block"
+//             btnReceive.style.display = "block"
+//             btnExcess.style.display = "block"
+//             pass = "finals"
+//         }else{
+//             alert("Wrong password")
+//         }
+//     }
+// });
 
 
 let count = 20
